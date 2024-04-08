@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import Header from "./src/Header"
 import Body from "./src/Body"
-import ResturantCard from "./src/ResturantCard"
+import RestaurantCard from "./src/RestaurantCard"
 
 const AppLayout = () => {
     return(
