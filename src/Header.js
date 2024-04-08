@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
+
 
 const Header = () => {
 
@@ -6,17 +8,18 @@ const Header = () => {
 
 
     return(
-        <div className="flex justify-between bg-blue-300  shadow-lg">
-            <div className="logo-container">
-                <img className="w-20 h-20 m-7" src="https://img.freepik.com/premium-vector/print_171487-162.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1707955200&semt=ais" />
+        <div className="flex justify-between  m-0  shadow-lg">
+            <div className="flex logo-container ">
+                <img className="w-12 h-12 m-3  ml-5 mr-0 rounded-3xl" src="https://cdn.dribbble.com/users/9953/screenshots/1875793/media/66fedec47cf4024bef3f89072f6de587.jpg?resize=400x0" />
+                <h1 className="m-3 text-xl ml-3 pt-2  font-extrabold ">TastyBitesDish</h1>
             </div>
             <div className="items-center">
-                <ul className="flex p-4 m-10">
-                    <li className="px-4">Home</li>
-                    <li className="px-4">About Us</li>
-                    <li className="px-4">Contact Us</li>
-                    <li className="px-4">Cart</li>
-                    <button className="login-button" onClick={() => {btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")}}>{btnName}</button>
+                <ul className="flex p-4 m-3">
+                    <li className="px-4 font-bold"> <Link to="/">Home</Link> </li>
+                    <li className="px-4 font-bold"><Link to="/about"> About Us </Link> </li>
+                    <li className="px-4 font-bold"> <Link to="/contact">Contact Us</Link></li>
+                    <li className="px-4 font-bold">Cart</li>
+                    <button className="login-button font-bold" onClick={() => {btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")}}>{btnName}</button>
                 </ul>
             </div>
         </div>
